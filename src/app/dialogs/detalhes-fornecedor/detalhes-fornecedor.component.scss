@@ -1,0 +1,8 @@
+.detail_header {
+  font-family: var(--mdc-dialog-subhead-font, Roboto, sans-serif) !important;
+  line-height: var(--mdc-dialog-subhead-line-height, 1.5rem) !important;
+  font-size: var(--mdc-dialog-subhead-size, 1rem) !important;
+  font-weight: var(--mdc-dialog-subhead-weight, 400) !important;
+  letter-spacing: var(--mdc-dialog-subhead-tracking, 0.03125em) !important;
+  margin-left: 1rem;
+}

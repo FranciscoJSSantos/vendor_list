@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-header-cell {
+  text-align: center !important;
+}
+
+.mat-mdc-cell {
+  text-align: center !important;
+  border-bottom: 1px solid #bdbdbd !important;
+}
+
+.mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
+  height: 550px !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+  background-color: #3a855c !important;
+}

@@ -1,0 +1,77 @@
+<section style="width: 400px">
+  <div
+    style="
+      background-color: #3a855c;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    "
+  >
+    <h2 class="detail_header">Detalhes Fornecedor</h2>
+    <mat-icon class="pointer" (click)="closeDialog()" style="margin-right: 1rem"
+      >close</mat-icon
+    >
+  </div>
+  <mat-dialog-content>
+    <h3>Dados Gerais</h3>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Nome Fantasia</p>
+      <p style="font-weight: medium">{{ data.nomeFantasia }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Código</p>
+      <p style="font-weight: medium">{{ data.codFornecedor }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Email</p>
+      <p style="font-weight: medium">{{ data.email }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Categoria</p>
+      <p style="font-weight: medium">{{ data.categoria }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Telefone</p>
+      <p style="font-weight: medium">{{ data.telefone }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">CNPJ</p>
+      <p style="font-weight: medium">{{ data.cnpj }}</p>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Grupo</p>
+      <p style="font-weight: medium">{{ data.grupo }}</p>
+    </div>
+
+    <h3>Endereço</h3>
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Rua</p>
+      <p style="font-weight: medium">{{ data.rua }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Bairro</p>
+      <p style="font-weight: medium">{{ data.bairro }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Cidade</p>
+      <p style="font-weight: medium">{{ data.cidade }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Unidade Federativa</p>
+      <p style="font-weight: medium">{{ data.unidadeFederativa }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between">
+      <p style="font-weight: bold">Pais</p>
+      <p style="font-weight: medium">{{ data.pais }}</p>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Voltar</button>
+  </mat-dialog-actions>
+</section>

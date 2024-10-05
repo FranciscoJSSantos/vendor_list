@@ -1,0 +1,132 @@
+<section style="width: 1200px">
+  <div
+    style="
+      background-color: #3a855c;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    "
+  >
+    <h2 class="detail_header">Editar Fornecedor</h2>
+    <mat-icon class="pointer" (click)="closeDialog()" style="margin-right: 1rem"
+      >close</mat-icon
+    >
+  </div>
+  <mat-dialog-content>
+    <form
+      [formGroup]="fornecedorForm"
+      style="
+        width: 100%;
+        height: 200px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      "
+    >
+      <h3>Dados Gerais</h3>
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>Código</mat-label>
+          <input
+            formControlName="codFornecedor"
+            matInput
+            placeholder="Código"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input formControlName="nomeFantasia" matInput placeholder="Código" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Código" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Categoria</mat-label>
+          <input formControlName="categoria" matInput placeholder="Código" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Telefone</mat-label>
+          <input formControlName="telefone" matInput placeholder="Código" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>CNPJ</mat-label>
+          <input formControlName="cnpj" matInput placeholder="Código" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            @for (status of statusList; track status) {
+            <mat-option [value]="status.value">{{
+              status.viewValue
+            }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <h3>Endereço</h3>
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>Rua</mat-label>
+          <input formControlName="rua" matInput placeholder="Rua" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Bairro</mat-label>
+          <input formControlName="bairro" matInput placeholder="Bairro" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cidade</mat-label>
+          <input formControlName="cidade" matInput placeholder="Cidade" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Unidade Federativa</mat-label>
+          <input
+            formControlName="unidadeFederativa"
+            matInput
+            placeholder="Unidade Federativa"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Pais</mat-label>
+          <input formControlName="pais" matInput placeholder="Pais" />
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Voltar</button>
+    <button
+      style="background-color: #3a855c; color: #ffffff"
+      mat-button
+      mat-dialog-close
+      (click)="saveEdit()"
+    >
+      Salvar
+    </button>
+  </mat-dialog-actions>
+</section>
