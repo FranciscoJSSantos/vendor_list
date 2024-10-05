@@ -123,6 +123,16 @@ export class FornecedorComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   formBuilder = inject(NonNullableFormBuilder);
   dialog = inject(MatDialog);
+  pageSizeOptions = [5, 10, 25];
+  hidePageSize = true;
+  showPageSizeOptions = true;
+  showFirstLastButtons = true;
+
+  length = 0;
+  pageIndex = 0;
+  pageSize = 10;
+
+  objectPagination = {};
 
   displayedColumns: string[] = [
     'codFornecedor',
@@ -196,5 +206,13 @@ export class FornecedorComponent implements AfterViewInit {
       address
     )}`;
     window.open(googleMapsUrl, '_blank');
+  }
+
+  isMobile() {
+    let width = window.innerWidth;
+    if (width <= 800) {
+      return true;
+    }
+    return false;
   }
 }

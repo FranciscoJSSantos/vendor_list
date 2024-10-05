@@ -190,11 +190,34 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
 
+    @if(!isMobile()) {
     <mat-paginator
-      [pageSizeOptions]="[5, 10, 20]"
+      [pageSize]="pageSize"
+      [length]="length"
+      [pageSizeOptions]="pageSizeOptions"
+      [pageIndex]="pageIndex"
+      class="mat-paginator-sticky"
       showFirstLastButtons
-      aria-label="Selecionar página de fornecedores"
     >
     </mat-paginator>
+    }
   </div>
 </section>
+@if(isMobile()) {
+<div>
+  <mat-paginator
+    [pageSize]="5"
+    [length]="length"
+    [pageIndex]="pageIndex"
+    class="mat-paginator-sticky"
+    [pageSize]="pageSize"
+    [length]="length"
+    [pageSizeOptions]="pageSizeOptions"
+    [hidePageSize]="hidePageSize"
+    [pageIndex]="pageIndex"
+    class="mat-paginator-sticky"
+    showFirstLastButtons
+  >
+  </mat-paginator>
+</div>
+}
