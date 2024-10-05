@@ -29,3 +29,7 @@ body {
 div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
   background-color: #3a855c !important;
 }
+
+.mat-mdc-paginator {
+  border: 1px solid #bdbdbd !important;
+}
