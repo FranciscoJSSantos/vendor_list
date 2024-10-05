@@ -2,6 +2,15 @@ table {
   width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+  .fornecedor_filter {
+    display: grid !important;
+  }
+  .fornecedor_buttons {
+    justify-content: center !important;
+  }
+}
+
 .mat-column-codFornecedor {
   border-right: 1px solid #bdbdbd;
   text-align: center;
